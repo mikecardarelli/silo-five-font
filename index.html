@@ -21,7 +21,7 @@
   body {
     background: #fff;
     color: #000;
-    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+    font-family: Courier, monospace;
     font-size: 16px;
     line-height: 1.6;
   }
@@ -36,11 +36,12 @@
   /* Left sidebar: text + input, sized to sit in the gap left of the tower */
   .sidebar {
     flex-shrink: 0;
-    width: 340px;
+    width: 360px;
     display: flex;
+	background: #fff;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 40px 40px 48px;
+    justify-content: flex-start;
+    padding: 40px;
   }
 
   .header {
@@ -73,7 +74,7 @@
   }
 
   .download-link:hover {
-    color: #0000EE;
+    color: blue;
   }
 
   .graffiti-bar {
@@ -91,7 +92,7 @@
   }
 
   .graffiti-bar input {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Courier, monospace;
     font-size: 15px;
     border: none;
     border-bottom: 1px solid #000;
@@ -154,7 +155,7 @@
     <header class="header">
       <h1>SILO FIVE</h1>
       <div class="header-sub">
-        <p class="description">A free font inspired by graffiti on the Silo&nbsp;No.&nbsp;5 building in Montreal, QC.</p>
+        <p class="description">A free font inspired by graffiti on the <a href="https://www.openstreetmap.org/?mlat=45.498109&mlon=-73.550141#map=17/45.498109/-73.550141" class="download-link" target="_blank">Silo&nbsp;No.&nbsp;5 building</a> in Montreal, QC.</p>
         <a href="https://fontstruct.com/fontstructions/show/2801222/silo-five" class="download-link" target="_blank">Download now &rarr;</a>
       </div>
     </header>
@@ -163,7 +164,7 @@
       <input
         id="graffiti-input"
         type="text"
-        maxlength="60"
+        maxlength="40"
         placeholder="type something..."
         autocomplete="off"
         spellcheck="false"
