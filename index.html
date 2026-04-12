@@ -166,6 +166,52 @@
     outline-offset: 2px;
   }
   
+  .silo-link {
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .silo-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .silo-modal.open {
+    display: flex;
+  }
+
+  .silo-modal-inner {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  .silo-modal-inner img {
+    display: block;
+    max-width: 40vw;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  .silo-modal-close {
+    position: absolute;
+    top: -32px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1;
+  }
+  
   @media (max-width: 768px) {
     .sidebar {
       width: 220px;
@@ -178,6 +224,10 @@
 	  .description, .download-link, .graffiti-bar input::placeholder {
 		 font-size: 14px;
 	  }
+	  .silo-modal-inner img {
+	    max-width: 100%;
+	    max-height: 90vh;
+	  }
     }
   
 </style>
@@ -189,7 +239,7 @@
     <header class="header">
       <h1>SILO FIVE</h1>
       <div class="header-sub">
-        <p class="description">A free font inspired by graffiti on the <a href="https://www.patrimoine-culturel.gouv.qc.ca/rpcq/detail.do?methode=consulter&id=115142&type=bien" class="download-link" target="_blank">Silo&nbsp;No.&nbsp;5</a> building in Montreal, QC.</p>
+        <p class="description">A free font inspired by <a href="#" class="silo-link" id="silo-link">graffiti</a> on the Silo No. 5 building in Montreal, QC.</p>
         <a href="https://fontstruct.com/fontstructions/show/2801222/silo-five" class="download-link" target="_blank">Download now &rarr;</a>
       </div>
     </header>
@@ -254,7 +304,12 @@ __________|  |_____________________|  |___|  |_________________________|  |_____
       <div id="graffiti-text"></div>
     </div>
   </div>
-
+<div id="silo-modal" class="silo-modal">
+  <div class="silo-modal-inner">
+    <button class="silo-modal-close" id="silo-close">&times;</button>
+    <img src="silo.png" alt="Silo No. 5, Montreal">
+  </div>
+</div>
 </div>
 
 <script>
@@ -314,6 +369,23 @@ __________|  |_____________________|  |___|  |_________________________|  |_____
   // run after fonts load
   document.fonts.ready.then(positionOverlay);
   setTimeout(positionOverlay, 500);
+  
+  const siloLink  = document.getElementById('silo-link');
+  const siloModal = document.getElementById('silo-modal');
+  const siloClose = document.getElementById('silo-close');
+
+  siloLink.addEventListener('click', e => {
+    e.preventDefault();
+    siloModal.classList.add('open');
+  });
+
+  siloClose.addEventListener('click', () => {
+    siloModal.classList.remove('open');
+  });
+
+  siloModal.addEventListener('click', e => {
+    if (e.target === siloModal) siloModal.classList.remove('open');
+  });
 </script>
 </body>
 </html>
