@@ -141,16 +141,34 @@
 
   #graffiti-text {
     font-family: 'SiloFive', sans-serif;
-    color: #000;
     white-space: nowrap;
     line-height: 1;
     background: #e8dfc8;
     padding: 6px 0px;
   }
   
+  .color-picker {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+ 
+  .color-swatch {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+ 
+  .color-swatch.active {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+  
   @media (max-width: 768px) {
     .sidebar {
-      width: 180px;
+      width: 220px;
       padding: 20px 16px 24px 20px;
   	  }
 	  h1 {
@@ -186,6 +204,16 @@
         spellcheck="false"
       >
     </div>
+    <div class="color-picker">
+        <div class="color-swatch active" data-color="#000000" style="background:#000000;" title="Black"></div>
+        <div class="color-swatch" data-color="#ffffff" style="background:#ffffff;" title="White"></div>
+		<div class="color-swatch" data-color="#ff0000" style="background:#ff0000;" title="Red"></div>
+		<div class="color-swatch" data-color="#00ff00" style="background:#00ff00;" title="Green"></div>
+		<div class="color-swatch" data-color="#0000ff" style="background:#0000ff;" title="Blue"></div>
+        <div class="color-swatch" data-color="#ffff00" style="background:#ffff00;" title="Yellow"></div>
+        <div class="color-swatch" data-color="#00ffff" style="background:#00ffff;" title="Cyan"></div>
+		<div class="color-swatch" data-color="#ff00ff" style="background:#ff00ff;" title="Magenta"></div>
+      </div>
   </aside>
 
   <div class="ascii-wrap" id="ascii-wrap">
@@ -267,6 +295,18 @@ __________|  |_____________________|  |___|  |_________________________|  |_____
     graffitiEl.textContent = input.value.toUpperCase();
     positionOverlay();
   }
+  
+  // Color picker
+  const swatches = document.querySelectorAll('.color-swatch');
+  swatches.forEach(swatch => {
+    swatch.addEventListener('click', () => {
+      swatches.forEach(s => s.classList.remove('active'));
+      swatch.classList.add('active');
+      graffitiEl.style.color = swatch.dataset.color;
+      // keep background white unless white text is chosen
+      graffitiEl.style.background = '#e8dfc8';
+    });
+  });
 
   input.addEventListener('input', updateGraffiti);
   window.addEventListener('resize', positionOverlay);
