@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silo Five — Free Font</title>
+<style>
+  @font-face {
+  	  font-family: 'SiloFive';
+  	  src: url('silo-five.otf.woff2') format('woff2');
+  	  font-weight: normal;
+  	  font-style: normal; }
+	  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .page {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  /* Left sidebar: text + input, sized to sit in the gap left of the tower */
+  .sidebar {
+    flex-shrink: 0;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 40px 40px 48px;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  h1 {
+    font-family: 'SiloFive', sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 2;
+    margin-bottom: 14px;
+  }
+
+  .header-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .download-link {
+    color: #000;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .download-link:hover {
+    color: #0000EE;
+  }
+
+  .graffiti-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .graffiti-bar label {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #888;
+  }
+
+  .graffiti-bar input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    width: 100%;
+    padding: 2px 0;
+    background: transparent;
+    color: #000;
+  }
+
+  .graffiti-bar input::placeholder {
+    color: #bbb;
+  }
+
+  .ascii-wrap {
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 48px 40px 0;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .ascii-building {
+    font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+    white-space: pre;
+    display: block;
+    font-size: clamp(10px, 1.65vh, 22px);
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+
+
+  /* The graffiti sits absolutely over the ascii-wrap */
+  #graffiti-overlay {
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 4px;
+  }
+
+  #graffiti-text {
+    font-family: 'SiloFive', sans-serif;
+    color: #000;
+    white-space: nowrap;
+    line-height: 1;
+    background: white;
+    padding: 6px 6px;
+  }
+  
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    <header class="header">
+      <h1>SILO FIVE</h1>
+      <div class="header-sub">
+        <p class="description">A free font inspired by graffiti on the Silo&nbsp;No.&nbsp;5 building in Montreal, QC.</p>
+        <a href="https://fontstruct.com/fontstructions/show/2801222/silo-five" class="download-link" target="_blank">Download now &rarr;</a>
+      </div>
+    </header>
+    <div class="graffiti-bar">
+      <label for="graffiti-input">Tag the building</label>
+      <input
+        id="graffiti-input"
+        type="text"
+        maxlength="60"
+        placeholder="type something..."
+        autocomplete="off"
+        spellcheck="false"
+      >
+    </div>
+  </aside>
+
+  <div class="ascii-wrap" id="ascii-wrap">
+    <div class="ascii-building" id="building">
+                                                                                                                    |‾‾‾‾‾‾|‾‾‾‾‾|‾‾‾‾‾|
+                                                                                                                    |:::[_]:[_]:[_]:[_]:::|
+                                                                                                                    |:::::::::::::::::::::|
+                                                                                                                    |:::[_]:[_]:[_]:[_]:::|
+                                                                                                                    |:::::::::::::::::::::|
+                                                                                                                    |:::[_]:[_]:[_]:[_]:::|
+                                                                                                                    |:::::::::::::::::::::|
+                                                                                                                    |:::::::::::::::::::::|
+                                                                                                                    |:::[_]:[_]:[_]:[_]:::|
+                                                                                                                    |:::::::::::::::::::::|
+           /\                       /\     /\                           /\                    /\    /\    /\    /\  |:::::::::::::::::::::|
+          /  \                     /  \   /  \                         /  \                  /  \  /  \  /  \  /  \ |:::[_]:[_]:[_]:[_]:::|
+__________|  |_____________________|  |___|  |_________________________|  |__________________|  |__|  |__|  |__|  |_|:::::::::::::::::::::|
+|::[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]::|:::[_]:[_]:[_]:[_]:::|
+<span id="facade-top"></span>|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::|:::::::::::::::::::::|
+|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::<span id="facade-right"></span>|:::::::::::::::::::::|
+|::[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]:[_]::|:::[_]:[_]:[_]:[_]:::|<span id="facade-bottom"></span>
+|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::|:::::::::::::::::::::|
+|:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::|:::::::::::::::::::::|
+(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  )(  ) ___|_____________________|
+|  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  | ___|_____________________| 
+|  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  | ___|_____________________|                       
+|  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  | ___|_____________________|                       
+|  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  | ___|_____________________|                       
+|  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  | ___|_____________________|
+|  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  | ___|_____________________|                       
+|  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  | ___|_____________________|                       
+|  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  | ___|_____________________|                       
+|  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  | ___|_____________________|
+|  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  ||  | ___|_____________________|                      
+\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\__/\___|_____________________|                                                                                                                                         
+    </div>
+    <div id="graffiti-overlay">
+      <div id="graffiti-text"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const input       = document.getElementById('graffiti-input');
+  const overlay     = document.getElementById('graffiti-overlay');
+  const graffitiEl  = document.getElementById('graffiti-text');
+  const asciiWrap   = document.getElementById('ascii-wrap');
+  const facadeTop   = document.getElementById('facade-top');
+  const facadeBot   = document.getElementById('facade-bottom');
+  const facadeRight = document.getElementById('facade-right');
+
+  function positionOverlay() {
+    const wrapRect  = asciiWrap.getBoundingClientRect();
+    const topRect   = facadeTop.getBoundingClientRect();
+    const botRect   = facadeBot.getBoundingClientRect();
+    const rightRect = facadeRight.getBoundingClientRect();
+
+    const height = botRect.top - topRect.top;
+
+    // margin inside the left | — roughly 1.25 character widths
+    const charWidth = height * 0.55;
+    const margin = charWidth * 1.25;
+
+    const top      = topRect.top  - wrapRect.top;
+    const left     = topRect.left - wrapRect.left + margin;
+    const maxWidth = (rightRect.left - wrapRect.left) - (topRect.left - wrapRect.left) - margin;
+
+    overlay.style.top      = top + 'px';
+    overlay.style.left     = left + 'px';
+    overlay.style.height   = height + 'px';
+    overlay.style.maxWidth = maxWidth + 'px';
+    overlay.style.overflow = 'hidden';
+
+    graffitiEl.style.fontSize = (height * 0.40) + 'px';
+  }
+
+  function updateGraffiti() {
+    graffitiEl.textContent = input.value.toUpperCase();
+    positionOverlay();
+  }
+
+  input.addEventListener('input', updateGraffiti);
+  window.addEventListener('resize', positionOverlay);
+
+  // run after fonts load
+  document.fonts.ready.then(positionOverlay);
+  setTimeout(positionOverlay, 500);
+</script>
+</body>
+</html>
