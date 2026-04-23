@@ -250,6 +250,21 @@
     }
   
 </style>
+ <!-- Emoji Favicon -->
+  <script>
+    const canvas = document.createElement('canvas');
+    canvas.width = 32;
+    canvas.height = 32;
+    const ctx = canvas.getContext('2d');
+    ctx.font = '28px serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('🏭', 16, 16);
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    link.href = canvas.toDataURL();
+    document.head.appendChild(link);
+  </script>
 </head>
 <body>
 <div class="page">
