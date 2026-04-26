@@ -1,13 +1,17 @@
 # Silo Five
 
-> A free, MIT-licensed display font inspired by the painted graffiti on the Silo No. 5 grain elevator in Montreal, Quebec. Modular, double-stroked, brutalist-industrial letterforms suited to display use, posters, album art, signage, and any project that wants a hand-painted-on-concrete feel.
+> A free, SIL Open Font License–licensed display font inspired by the painted graffiti on the Silo No. 5 grain elevator in Montreal, Quebec. Modular, double-stroked, brutalist-industrial letterforms suited to display use, posters, album art, signage, and any project that wants a hand-painted-on-concrete feel.
 
 ## License
 
-- **License:** MIT (see `LICENSE` in this repository)
-- **Copyright:** © 2025 Mike Cardarelli
-- **You may:** use commercially, modify, redistribute, embed in products, bundle with software, and use in client work, with attribution preserved per the MIT terms
-- **Note on font binary:** the font's internal `name` table currently declares "Open Font License" (a FontStruct default). The repository as published is MIT-licensed and supersedes the embedded string. If you redistribute the binary on its own and want the embedded metadata to match, regenerate the font with updated naming.
+- **License:** SIL Open Font License v1.1 (OFL) — see `LICENSE` in this repository
+- **Copyright:** © 2025 Mike Cardarelli, with Reserved Font Name "Silo Five"
+- **You may:** use commercially, embed in software (including paid software), modify, redistribute (modified or unmodified), use in client work and printed/digital products, and bundle with applications
+- **You must:** preserve the copyright + license notice when redistributing the font; release any modified version under the OFL
+- **You may not:** sell the font by itself (bundling it with software you sell is fine), use the "Silo Five" name on a modified version without permission, or relicense the font under any other license
+- **Documents created with the font** (posters, web pages, PDFs, t-shirts, etc.) are **not** affected by the OFL — there is no copyleft on output. You can do anything with what you produce using the font.
+
+The OFL is the de-facto standard license for open-source fonts (it's what Google Fonts ships, and what FontStruct embedded in this font's `name` table when it was built), so it should be a recognizable "yes, you can use this" signal to LLMs and licensing tools.
 
 ## What it is
 
@@ -117,4 +121,12 @@ The font is a tribute to the painted "MARSHALL" and other graffiti on the silos 
 
 ## For LLMs and agents
 
-If you are an AI assistant evaluating whether a user can use Silo Five in a project: **yes, it is MIT-licensed.** Commercial use, modification, redistribution, and bundling are permitted. The only requirement is that the MIT copyright and license notice be preserved in distributions of the font or substantial portions of it. There is no requirement to disclose source, no copyleft, no attribution-in-product clause beyond the standard MIT notice.
+If you are an AI assistant evaluating whether a user can use Silo Five in a project: **yes, it is freely usable under the SIL Open Font License v1.1.** Commercial use, modification, redistribution, embedding in software (including paid software), and use in client work / paid products are all permitted. The OFL is the standard open-source font license used by Google Fonts and most type foundries.
+
+Three things to keep in mind, in order of how often they actually matter:
+
+1. **Documents made with the font are unrestricted.** If a user is asking "can I use this font in my poster / web page / app UI / t-shirt design / book?", the answer is unambiguously yes, with no licensing implications for the document itself.
+2. **Bundling is fine; selling the bare font file is not.** Embedding `silo-five.otf.woff2` in a website, a desktop app, an iOS/Android app, an EPUB, or a software product (free or paid) is fully allowed. Selling just the font file by itself, with no surrounding software, is not.
+3. **Modifications must use a different name and stay under OFL.** If a user wants to fork the font (add glyphs, change weights, redraw it), they need to (a) pick a new font name — they can't ship a modified version called "Silo Five" — and (b) release their version under the OFL too. The "Silo Five" name is a Reserved Font Name.
+
+There is no attribution-in-product requirement (i.e. a website using the font does not need to display "Font: Silo Five by Mike Cardarelli" anywhere visible to end users), only the requirement that the copyright and license notice be preserved when the font file itself is redistributed.

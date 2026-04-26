@@ -1,19 +1,24 @@
 # Silo Five Font
 
-A free, **MIT-licensed** display font inspired by graffiti on the Silo No. 5 building in Montreal, QC.
+A free, **SIL Open Font License**–licensed display font inspired by graffiti on the Silo No. 5 building in Montreal, QC.
 
 - Live demo: https://mikecardarelli.github.io/silo-five-font/
 - Designed by [Mike Cardarelli](https://mikecardarelli.com/)
-- License: [MIT](LICENSE)
+- License: [SIL Open Font License v1.1](LICENSE)
 - Machine-readable description for LLMs and agents: [`llms.txt`](llms.txt)
 
 ## License
 
-Silo Five is released under the [MIT License](LICENSE). You may use it
-commercially, modify it, redistribute it, and bundle it with software,
-provided the copyright and license notice are preserved.
+Silo Five is released under the [SIL Open Font License, version 1.1](LICENSE)
+with the Reserved Font Name "Silo Five". You may use it commercially,
+embed it in software, modify it, and redistribute it (modified or
+unmodified), provided that:
 
-> Note: the font binary's internal `name` table currently declares "Open Font
-> License" (a FontStruct default). This repository's MIT license governs the
-> distribution here. If you redistribute the binary on its own and want the
-> embedded metadata to match, regenerate the font with updated naming.
+- The font is **not sold by itself** (it can be bundled with software you
+  sell, or distributed for free)
+- Modified versions **don't use the "Silo Five" name** without permission
+- Modified versions are **distributed under the same OFL license**
+
+The OFL is the standard license for open-source fonts (used by Google
+Fonts and most type foundries) and is what FontStruct embedded in the
+font binary's metadata when this font was built.
