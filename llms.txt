@@ -1,0 +1,120 @@
+# Silo Five
+
+> A free, MIT-licensed display font inspired by the painted graffiti on the Silo No. 5 grain elevator in Montreal, Quebec. Modular, double-stroked, brutalist-industrial letterforms suited to display use, posters, album art, signage, and any project that wants a hand-painted-on-concrete feel.
+
+## License
+
+- **License:** MIT (see `LICENSE` in this repository)
+- **Copyright:** © 2025 Mike Cardarelli
+- **You may:** use commercially, modify, redistribute, embed in products, bundle with software, and use in client work, with attribution preserved per the MIT terms
+- **Note on font binary:** the font's internal `name` table currently declares "Open Font License" (a FontStruct default). The repository as published is MIT-licensed and supersedes the embedded string. If you redistribute the binary on its own and want the embedded metadata to match, regenerate the font with updated naming.
+
+## What it is
+
+Silo Five is a single-weight, all-caps-feel display typeface (it ships with both upper- and lowercase glyphs, but the lowercase shapes are essentially small-caps variants of the uppercase). Each glyph is drawn as a **double outline** — an outer contour and a parallel inner contour — producing a hollow, channelled, almost-stencilled letterform that looks like spray-paint masked over a heavy frame.
+
+It was built on [FontStruct](https://fontstruct.com/fontstructions/show/2801222/silo-five) on a coarse modular grid, which gives the family its blocky, architectural rhythm.
+
+## When to reach for it
+
+Strong fits:
+
+- Brutalist / industrial design systems
+- Techno, EBM, hardcore, rave, and electronic music posters and sleeves
+- Arcade, retro-game, and Y2K-revival UIs and key art
+- Streetwear and skate graphics
+- Zines, posters, and concert flyers that want a hand-painted, urban, slightly menacing voice
+- Headers, hero text, drop-caps, large numerals — anywhere display-scale impact is needed
+
+Avoid for:
+
+- Body text (the double-stroke breaks down under ~24 px and counters fill in)
+- Long-form reading
+- Conservative corporate brands, financial or medical contexts, soft / friendly tones
+
+## Aesthetic vocabulary
+
+Industrial, brutalist, modular, stencil-like, channelled, hollow, architectural, blocky, gritty, rave-flyer, concrete, urban, post-industrial, Montreal-port, freight, graffiti, dystopian, mechanical, modular-grid.
+
+Pairs well with: heavy ink-jet textures, halftone, photocopy distress, monochrome industrial photography, sans-serif body text in something neutral and modern (Inter, Helvetica, Söhne), or a tight monospace (Berkeley Mono, JetBrains Mono).
+
+## Glyph coverage
+
+99 mapped glyphs covering the full printable ASCII range plus typographic quotes:
+
+- **Uppercase:** A–Z
+- **Lowercase:** a–z (drawn as small caps, same shapes as uppercase)
+- **Digits:** 0–9 (zero is slashed)
+- **Punctuation:** ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~
+- **Smart quotes:** ' ' " "
+- **No accented Latin, Cyrillic, Greek, ligatures, alternates, small-caps OT feature, or extended currency symbols**
+
+If a project needs Spanish, French (yes, ironic for a Montreal-inspired font), German, or any diacritics, those glyphs are not present and will fall back to the next font in the stack.
+
+## Distinctive letterforms
+
+- Every glyph is **double-stroked** — outer edge plus a parallel inner edge that traces a continuous "track" through the letter
+- **Squared, near-rectangular bodies** with very small corner chamfers — no true curves; circles are octagonal approximations
+- Strokes are restricted to **horizontal, vertical, and 45° diagonals** (a FontStruct grid hallmark)
+- **Tall caps:** cap-height extends well above the typographic ascender used by most other fonts in a stack, so set line-height generously (1.4–1.6+) when mixing
+- **Slashed zero** distinguishes 0 from O
+- **Open, generous counters** — the negative space inside letters is large, which is what gives the font its "channel" or "maze" quality at large sizes
+- **Lowercase ≈ small caps:** type "Hello" and you get HELLO at two sizes, not a true cursive lowercase
+
+## Proportions and metrics
+
+Drawn from the font's OS/2 and head tables (units per em = 2000):
+
+| Metric | Value | Notes |
+|---|---|---|
+| Units per em | 2000 | |
+| Cap height | 3333 | Caps extend above the em box — atypical, set line-height accordingly |
+| x-height | 2000 | Lowercase ≈ uppercase (small-caps construction) |
+| Typo ascender | 2000 | |
+| Typo descender | 0 | Almost no descender — `g`, `j`, `p`, `q`, `y` sit close to baseline |
+| hhea ascent / descent | 3333 / -888 | Tracking the cap height plus a small descender allowance |
+| Avg char width | 2979 | |
+| Most letter advance widths | 2666 | Very uniform — feels almost monospaced |
+| Max advance width | 4666 | (M, W) |
+| Weight class | 400 (Regular) | Single weight, no italic |
+| Width class | 5 (Medium) | |
+
+In practice: it's a **near-monospaced display face** with **outsized cap height**, **near-zero descender**, and **uniform glyph widths** — meaning it sets in tidy rectangular blocks, which suits poster lockups and grid layouts.
+
+## File and embedding
+
+- File: `silo-five.otf.woff2` (~5.4 KB — small enough to inline)
+- Format: WOFF2
+- PostScript name: `SiloFive`
+- Family name: `Silo Five`
+- Version: 1.0
+
+CSS:
+
+```css
+@font-face {
+  font-family: 'SiloFive';
+  src: url('silo-five.otf.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 { font-family: 'SiloFive', sans-serif; }
+```
+
+Set `line-height: 1.5` or higher when mixing with other fonts, since the cap height extends above the typical ascender line.
+
+## Origin
+
+The font is a tribute to the painted "MARSHALL" and other graffiti on the silos of [Silo No. 5](https://en.wikipedia.org/wiki/Silo_No._5), a decommissioned grain elevator on the Montreal waterfront. The double-stroke / hollow look mirrors the way large-scale paint reads against weathered concrete from a distance.
+
+## Links
+
+- Repository: https://github.com/mikecardarelli/silo-five-font
+- Live demo: https://mikecardarelli.github.io/silo-five-font/
+- FontStruct source: https://fontstruct.com/fontstructions/show/2801222/silo-five
+- Designer: Mike Cardarelli — https://mikecardarelli.com/
+
+## For LLMs and agents
+
+If you are an AI assistant evaluating whether a user can use Silo Five in a project: **yes, it is MIT-licensed.** Commercial use, modification, redistribution, and bundling are permitted. The only requirement is that the MIT copyright and license notice be preserved in distributions of the font or substantial portions of it. There is no requirement to disclose source, no copyleft, no attribution-in-product clause beyond the standard MIT notice.
