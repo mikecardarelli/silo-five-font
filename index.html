@@ -6,10 +6,16 @@
 <title>Silo Five Font</title>
 <style>
   @font-face {
-  	  font-family: 'SiloFive';
-  	  src: url('silo-five.otf.woff2') format('woff2');
-  	  font-weight: normal;
-  	  font-style: normal; }
+      font-family: 'SiloFive';
+      src: url('silo-five.otf.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal; }
+
+  @font-face {
+      font-family: 'SiloFiveText';
+      src: url('silo-five-text.otf.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal; }
 	  
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -156,11 +162,11 @@
   }
 
   #graffiti-text {
-    font-family: 'SiloFive', sans-serif;
+    font-family: 'SiloFiveText', sans-serif;
     white-space: nowrap;
     line-height: 1;
     background: #e8dfc8;
-    padding: 8px 0px;
+    padding: 6px 0px;
   }
   
   .color-picker {
@@ -369,21 +375,23 @@ __________|  |_____________________|  |___|  |_________________________|  |_____
     const botRect   = facadeBot.getBoundingClientRect();
     const rightRect = facadeRight.getBoundingClientRect();
 
-    const facadeHeight = botRect.top - topRect.top;
-    const fontSize     = facadeHeight * 0.35;
-    const charWidth    = fontSize * 2.5;
+    const height = botRect.top - topRect.top;
+
+    // margin inside the left | — roughly 1.25 character widths
+    const charWidth = height * 0.55;
+    const margin = charWidth * 1.25;
 
     const top      = topRect.top  - wrapRect.top;
-    const left     = topRect.left - wrapRect.left + charWidth;
-    const maxWidth = rightRect.left - topRect.left - charWidth;
+    const left     = topRect.left - wrapRect.left + margin;
+    const maxWidth = (rightRect.left - wrapRect.left) - (topRect.left - wrapRect.left) - margin;
 
     overlay.style.top      = top + 'px';
     overlay.style.left     = left + 'px';
-    overlay.style.height   = facadeHeight + 'px';
+    overlay.style.height   = height + 'px';
     overlay.style.maxWidth = maxWidth + 'px';
     overlay.style.overflow = 'hidden';
 
-    graffitiEl.style.fontSize = fontSize + 'px';
+    graffitiEl.style.fontSize = (height * 0.55) + 'px';
   }
 
   function updateGraffiti() {
